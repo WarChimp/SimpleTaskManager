@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>The 'Have You Done It Yet' board</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Have you done it yet?</h1>
+        <form id="new-task-form">
+            <label>What do you need to do?</label>
+            <input type="text" id="task" name="taskname" autocomplete="off">
+            <input type="submit" value="Add">
+        </form>
+
+        <div id="task-container">
+            <ul id="tasks">
+            </ul>            
+        </div>
+
+        <button type="button" id="save">Save Tasks</button>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
