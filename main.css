@@ -13,28 +13,41 @@ body {
 
 h1 {
     margin: auto;
-    width: 50%;
+    width: 60%;
     margin-bottom: 50px;
 }
 
 #main {
     margin: auto;
-    width: 50%;
+    width: 60%;
     border-top: 1px solid var(--c3);
     border-left: 1px solid var(--c3);
     border-right: 1px solid var(--c3);
     background-color: var(--c5);
     padding: 10px;
-    color: var(--c2);
+    color: black;
     border-radius: 10px;
   }
 
 #task-container > ul > li {
     display: flex;
+    border-bottom: 2px gainsboro solid;
+    justify-content: space-between;
+    width: 100%;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+#card-body > li {
+    display: flex;
     justify-content: space-between;
     width: 60%;
     list-style-type: none;
     font-size: 18px;
+}
+
+#new-task-form {
+    margin-bottom: 25px;
 }
 
 #new-task-form > label {

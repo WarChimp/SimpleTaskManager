@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>The 'Have You Done It Yet' board</title>
 </head>
 <body>
     <div id="main">
         <h1>Have you done it yet?</h1>
         <form id="new-task-form">
-            <label>What do you need to do?</label>
-            <input type="text" id="task" name="taskname" autocomplete="off">
-            <input type="submit" value="Add">
+            <div class="form-row">
+                <div class="col">
+                    <label>What do you need to do?</label>
+                </div>
+                <div class="col-7">
+                    <input type="text" id="task" name="taskname" class="form-control" autocomplete="off">
+                </div>
+                <div class="col">
+                    <input type="submit" value="Add" class="btn btn-primary">
+                </div>
+                <div class="col">
+                    <button type="button" id="save" class="btn btn-primary">Save Tasks</button>
+
+                </div>
+            </div>
         </form>
 
-        <div id="task-container">
-            <ul id="tasks">
-            </ul>            
+        <div class="card">
+            <div class="card-body">
+                <div id="task-container">
+                    <ul id="tasks">
+                    </ul>            
+                </div>
+            </div>
         </div>
+        
 
-        <button type="button" id="save">Save Tasks</button>
 
     </div>
     <script src="main.js"></script>

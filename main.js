@@ -21,13 +21,21 @@ newtask.addEventListener("submit", function(event){
 
 function addTask(task){
     const li = document.createElement("li")
-    const checkbox = document.createElement("input")
+    const checkbox = document.createElement("button")
     const currentCounter = taskCounter
-    checkbox.type = "checkbox"
+    const icon = document.createElement("i")
+    const div = document.createElement("div")
+    div.classList.add("card-body")
+    icon.classList.add("bi-pin-angle")
+    checkbox.type = "button"
+    checkbox.innerHTML = "Complete"
+    checkbox.classList.add("btn", "btn-primary")
 
     
     li.innerHTML = task 
+    //taskArea.appendChild(div)
     taskArea.appendChild(li)
+    taskArea.appendChild(icon)
     li.appendChild(checkbox)
 
     console.log("before storage counter: ", taskCounter)
@@ -38,14 +46,9 @@ function addTask(task){
     checkbox.addEventListener("click", function(){
         const sup = document.createElement("s")
         const taskName = li.innerText
-        const checkbox = document.createElement("input")
-        checkbox.type = 'checkbox'
-        checkbox.checked = true
-        checkbox.disabled = true
-        console.log(typeof(taskName))
         li.innerText = ""
         console.log("on event: " + currentCounter)
-
+        checkbox.disabled = true
         li.insertAdjacentElement('afterbegin', sup)
         li.insertAdjacentElement('beforeend', checkbox)
         sup.innerHTML = taskName
@@ -56,21 +59,27 @@ function addTask(task){
 
 function reloadTask(task, index){
     const li = document.createElement("li")
-    const checkbox = document.createElement("input")
-    checkbox.type = "checkbox"
+    const checkbox = document.createElement("button")
+    const icon = document.createElement("i")
+    const div = document.createElement("div")
+    div.classList.add("card-body")
+    icon.classList.add("bi-pin-angle")
+    checkbox.type = "button"
+    checkbox.innerHTML = "Complete"
+    checkbox.classList.add("btn", "btn-primary")
 
     listOfTasks.push(task)
     li.innerHTML = task 
+    //taskArea.appendChild(div)
     taskArea.appendChild(li)
+    taskArea.appendChild(icon)
     li.appendChild(checkbox)
 
     checkbox.addEventListener("click", function(){
         const sup = document.createElement("s")
         const taskName = li.innerText
-        const checkbox = document.createElement("input")
-        checkbox.type = 'checkbox'
-        checkbox.checked = true
         checkbox.disabled = true
+
         li.innerText = ""
 
         li.insertAdjacentElement('afterbegin', sup)
